@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@swc/core": "^1.2.38",
+    "@swc/jest": "^0.1.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
+    "@testing-library/react-hooks": "^3.4.2",
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
@@ -39,5 +42,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "intersection-observer": "^0.11.0",
+    "react-test-renderer": "^17.0.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": "@swc/jest"
+    }
   }
 }
